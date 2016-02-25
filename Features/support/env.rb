@@ -21,7 +21,7 @@ Before do |scenario|
   debug_output("REBASE      = #{ ENV['REBASE']}")
   debug_output("ENVIRONMENT = #{ ENV['ENVIRONMENT']}")
 
-  start_browser(scenario)
+ # start_browser(scenario)
   # @browser.goto('http://bbc.com')
   # @browser.goto(@base_url)
   # add_product_to_basket('http://www.asos.com/pgeproduct.aspx?iid=5039473&CTARef=Basket+Page&r=2')
@@ -84,7 +84,7 @@ After do |scenario|
     remove_added_addresses
     empty_basket
   end
-  @browser.close
+ # @browser.close
 end
 
 at_exit do
