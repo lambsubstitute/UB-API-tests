@@ -1,4 +1,4 @@
-
+@report_gen
 Feature: remove item from the basket via the api
 
 

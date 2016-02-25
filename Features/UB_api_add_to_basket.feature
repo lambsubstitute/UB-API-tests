@@ -1,4 +1,4 @@
-@API @api
+@API @api @report_gen
 Feature: UB api - add to basket
 
 
@@ -16,6 +16,7 @@ Feature: UB api - add to basket
     Given I have a user token
     And I know the product id for the product "<product_url>"
     When I request through the api the item is added to the basket
+    Then the iem requested should be in the new basket
     And I remove the item from the basket
     Then my basket should be empty
     Examples:

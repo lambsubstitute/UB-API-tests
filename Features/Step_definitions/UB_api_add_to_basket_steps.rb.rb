@@ -22,6 +22,7 @@ When(/^I request through the api the item is added to the basket$/) do
   puts response.body
   body = response.body
   assert (body.include? 'Product is out of stock') == false, 'product was not in stock, so failing test, check you can still crawl products from this shop by checking the product'
+  basket_should_not_be_empty
 end
 
 Then(/^the iem requested should be in the new basket$/) do
@@ -30,6 +31,17 @@ Then(/^the iem requested should be in the new basket$/) do
   assert response.body.include? '"subtotal":{"value":345,"currency":{"code":null,"symbol":"£"},"text":"£345.00"},"total":{"value":355,"currency":{"code":null,"symbol":"£"},"text":"£355.00"},"transactions":[{"shop":{"id":"273","name":"Farfetch - Designer Luxury Fashion for Men &amp; Women"'
 end
 
+
+Then(/^I should have an item the basket$/) do
+  basket_should_not_be_empty
+end
+
+def basket_should_not_be_empty
+  response = get_current_basket
+  puts response.body
+  assert response.body.include? 'itemsTotal'
+  assert ((response.body.include? 'itemsTotal=>0') == false)
+end
 
 And(/^I remove the item from the basket$/) do
   basket = get_current_basket

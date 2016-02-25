@@ -1,3 +1,4 @@
+@report_gen
 Feature: api documentation testing
 
   Scenario: can get a api token
