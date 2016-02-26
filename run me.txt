@@ -1,0 +1,1 @@
+cucumber --tags @report_gen --format pretty --format html --out 'C:\Users\keith\Documents\GitHub\UB-API-tests\api_report.html'
