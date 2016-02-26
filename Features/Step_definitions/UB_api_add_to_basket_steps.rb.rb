@@ -3,6 +3,11 @@
 And(/^I know the product id for the product "(.*)"$/) do |arg|
   get_data_from_request_crawl_on_product(arg)
   product_json = get_product_json(@parsed_response)
+  @status = get_value_from_json_for_key('status', @parsed_response).to_s
+  if @status != 'success'
+    stack = get_value_from_json_for_key('stack', @parsed_response).to_s
+    assert false, stack
+  end
   @prod_id = get_value_from_json_for_key('id', product_json).to_s
   puts 'got this product id out from product data'
   puts @prod_id

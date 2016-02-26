@@ -34,7 +34,7 @@ Feature: remove item from the basket via the api
   @API @api @API_remove_from_basket
   Scenario: remove item from basket - BooHoo - IT
     Given I have a user token
-    And I know the product id for the product "http://it.boohoo.com/calzature/dzz97714?zanpid=2112529763012170752&utm_source=ZanoxIT&utm_medium=affiliates&utm_term=2092734&zanoxprogramid=15645"
+    And I know the product id for the product "http://it.boohoo.com/abbigliamento/nuovo-arrivo/dzz91338"
     When I request through the api the item is added to the basket
     And I remove the item from the basket
     Then my basket should be empty

@@ -43,5 +43,5 @@ Feature: api documentation testing
       | http://www.farfetch.com |
       | http://www.asos.de      |
       | http://de.boohoo.com    |
-      | http://bbc.com          |
+
 
