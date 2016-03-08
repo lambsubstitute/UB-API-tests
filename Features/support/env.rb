@@ -12,14 +12,14 @@ require 'HTTParty'
 
 
 Before do |scenario|
-  puts "starting the mother fucking tests"
+ # puts "starting the mother fucking tests"
   set_ENV_variable_defaults
-  debug_output("====================================")
-  debug_output("***********ENVIRONMENT**************")
-  debug_output("BROWSER     = #{ ENV['BROWSER']}")
-  debug_output("ORIENTATION = #{ ENV['ORIENTATION']}")
-  debug_output("REBASE      = #{ ENV['REBASE']}")
-  debug_output("ENVIRONMENT = #{ ENV['ENVIRONMENT']}")
+ # debug_output("====================================")
+ # debug_output("***********ENVIRONMENT**************")
+ # debug_output("BROWSER     = #{ ENV['BROWSER']}")
+ # debug_output("ORIENTATION = #{ ENV['ORIENTATION']}")
+ # debug_output("REBASE      = #{ ENV['REBASE']}")
+ # debug_output("ENVIRONMENT = #{ ENV['ENVIRONMENT']}")
 
  # start_browser(scenario)
   # @browser.goto('http://bbc.com')

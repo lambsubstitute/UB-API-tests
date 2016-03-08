@@ -119,6 +119,7 @@ end
 
 
 def request_shop_supported_status(shop_url)
+  puts ' checking live statsus for shop: ' + shop_url
   api_prod_crawl_url = API_BASE + 'shop/scriptexists?'
   shop_uri  = URI(shop_url)
   response = HTTParty.post(api_prod_crawl_url, :body => 'url=' + shop_uri.to_s)

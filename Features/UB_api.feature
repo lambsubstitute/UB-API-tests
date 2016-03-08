@@ -40,6 +40,9 @@ Feature: api documentation testing
     Then the status should be supported
     Examples:
       | shop_url                |
+      |http://www1.bloomingdales.com/|
+      |http://www.shoptiques.com|
+      |http://www.heels.com     |
       | http://www.farfetch.com |
       | http://www.asos.de      |
       | http://de.boohoo.com    |
