@@ -52,3 +52,8 @@ Then(/^the status should be supported$/) do
   parsed_status = parse_json(@shop_supported_response.body)
   assert (parsed_status.fetch(:status) == 'ok'), parsed_status.fetch(:status).to_s + ' did not match the expected status of: "ok"'
 end
+
+Then(/^the status should not be supported$/) do
+  parsed_status = parse_json(@shop_supported_response.body)
+  assert (parsed_status.fetch(:status) == 'error'), parsed_status.fetch(:status).to_s + ' did not match the expected status of: "error"'
+end

@@ -24,7 +24,7 @@ Feature: UB api - add to basket
       | http://www.richersounds.com/product/wireless-streaming-accessories/harman-kardon/bta10/harm-bta10 |
       | http://www.richersounds.com/product/all-headphones/soundmagic/e10s/soun-e10s                      |
       | http://tidd.ly/e832ce2e                                                                           |
-      | http://tidd.ly/c2974c6e                                                                           |
+    #  | http://tidd.ly/c2974c6e                                                                           |
       | http://tidd.ly/de9ee8c2                                                                           |
       | http://tidd.ly/1b3c849d                                                                           |
       | http://tidd.ly/4e35820f                                                                           |
